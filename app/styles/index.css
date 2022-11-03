@@ -1,0 +1,249 @@
+:root {
+	--amzbtn: #ffd814;
+	--amzbtnborder: #fcd200;
+}
+body {
+	font-family: "Outfit", sans-serif;
+	background-color: #ebebeb;
+}
+
+header {
+	font-family: "Outfit", sans-serif;
+	padding-block: 2rem;
+	margin: auto;
+	inline-size: 80%;
+}
+
+.bar .logo {
+	border: 1px solid #a5c71b;
+	max-inline-size: 15rem;
+	padding-block: 0.5rem;
+	padding-inline: 1rem;
+	border-radius: 0.5rem;
+}
+
+.bar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-block: 1rem;
+	gap: 1rem;
+}
+
+.header .navigation {
+	display: flex;
+	gap: 2rem;
+}
+
+.header .navigation a {
+	text-decoration: none;
+	color: black;
+	font-size: 1.4rem;
+	padding-block: 0.5rem;
+	padding-inline: 1rem;
+	border: none;
+	border-radius: 1rem;
+	transition-property: background-color;
+	transition-duration: 300ms;
+}
+
+.header .navigation a.active {
+	color: #a5c71b;
+	background: black;
+}
+
+.header .navigation a:hover {
+	color: #a5c71b;
+	background: black;
+}
+
+.footer {
+	margin: auto;
+	inline-size: 100%;
+	padding-block-start: 2rem;
+}
+
+.footer .container {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas: "projects mail" "copyR copyR";
+}
+
+.copyR {
+	grid-area: copyR;
+	background: black;
+	color: #a5c71b;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.myProjects {
+	grid-area: projects;
+	display: flex;
+	padding-block: 1rem;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #a5c71b;
+}
+
+.mail {
+	display: flex;
+	padding-block: 1rem;
+	grid-area: mail;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #a5c71b;
+}
+
+.me {
+	padding-inline: 3rem;
+	padding-block-start: 2rem;
+	padding-block-end: 3rem;
+}
+
+.me h2 {
+	margin: 0;
+}
+
+.heading {
+	margin: 0;
+	text-align: center;
+	color: blueviolet;
+}
+
+.consoles-grid {
+	inline-size: 80%;
+	padding-inline: 2rem;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding-block-start: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+	.bar {
+		flex-direction: row;
+		justify-content: space-between;
+		padding-inline: 3rem;
+	}
+	.me {
+		border: 1px solid #a5c71b;
+		margin: 3rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: auto;
+		inline-size: 90%;
+	}
+	.consoleCard {
+		border: 1px solid #a5c71b;
+		padding: 1.5rem;
+		display: grid;
+		grid-template-columns: 1fr 60% 1fr;
+		grid-template-rows: 20px auto;
+		grid-template-areas: "img title price" "img description price";
+		column-gap: 1.5rem;
+	}
+	.consoleTitle {
+		grid-area: title;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.consoleTitle h3 {
+		margin: 0;
+	}
+	.consoleDescription {
+		grid-area: description;
+	}
+	.amzn {
+		grid-area: price;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+	}
+	.btnAmzn {
+		border: 1px solid #ffd932;
+		padding-block: 0.5rem;
+		padding-inline: 2rem;
+		border-radius: 1rem;
+		color: #0f1111;
+		text-decoration: none;
+		background-color: #fcd200;
+	}
+
+	.btnAmzn:hover {
+		background-color: #fed400dd;
+		cursor: pointer;
+	}
+
+	.amzn p {
+		margin: 0;
+	}
+
+	.amzn p:first-child {
+		font-weight: bold;
+	}
+
+	.consoleImg {
+		block-size: 10rem;
+		inline-size: 10rem;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+	.imgs {
+		grid-area: img;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.wrapperItem {
+		margin: auto;
+		inline-size: 90%;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+	.itemTitle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+	}
+	.itemTitle > * {
+		margin: 0;
+	}
+	.itemImg {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.itemImg img {
+		block-size: 20rem;
+		inline-size: 20rem;
+		object-fit: cover;
+	}
+	.imgsItem {
+		border: 1px solid #a5c71b;
+		block-size: 20rem;
+		inline-size: 100%;
+	}
+	.itemDescription {
+		border: 1px solid #a5c71b;
+		border-radius: 1rem;
+		background-color: #a5c71b36;
+		padding: 2rem;
+	}
+	.itemDescription p {
+		margin: 0;
+		text-transform: capitalize;
+		line-height: 2rem;
+	}
+}

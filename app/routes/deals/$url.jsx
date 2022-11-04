@@ -57,6 +57,11 @@ function Url() {
 			<div className="itemDescription">
 				<p>{description}</p>
 			</div>
+			<Button
+				amzn={amzn}
+				text="Ver en Amazon"
+				target="_blank"
+			/>
 		</div>
 	);
 }

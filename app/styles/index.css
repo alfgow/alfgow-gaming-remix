@@ -123,6 +123,114 @@ header {
 	padding-block-start: 1rem;
 }
 
+.consoleImg {
+	block-size: 10rem;
+	inline-size: 10rem;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.consoleCard {
+	border: 1px solid #a5c71b;
+	padding: 1.5rem;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas: "img" "title" "price" "description";
+	column-gap: 1.5rem;
+}
+
+.imgs {
+	grid-area: img;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.amzn {
+	grid-area: price;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.amzn > * {
+	margin: 0;
+}
+
+.consoleTitle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-block: 1rem;
+}
+
+.consoleTitle > * {
+	margin: 0;
+}
+
+.btnAmzn {
+	border: 1px solid #ffd932;
+	padding-block: 0.5rem;
+	padding-inline: 2rem;
+	border-radius: 1rem;
+	color: #0f1111;
+	text-decoration: none;
+	background-color: #fcd200;
+}
+
+.wrapperItem {
+	inline-size: 90%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	border: 1px solid #a5c71b;
+	margin: auto;
+}
+
+.itemImg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.itemImg img {
+	block-size: 20rem;
+	inline-size: 20rem;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.itemTitle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	margin-block-start: 0.5rem;
+}
+
+.itemTitle > * {
+	margin: 0;
+}
+
+.itemDescription {
+	border: 1px solid #a5c71b;
+	border-radius: 1rem;
+	background-color: #a5c71b36;
+	padding: 2rem;
+}
+.itemDescription p {
+	margin: 0;
+	text-transform: capitalize;
+	line-height: 2rem;
+}
+
 @media screen and (min-width: 768px) {
 	.bar {
 		flex-direction: row;
@@ -143,9 +251,9 @@ header {
 		border: 1px solid #a5c71b;
 		padding: 1.5rem;
 		display: grid;
-		grid-template-columns: 1fr 60% 1fr;
-		grid-template-rows: 20px auto;
-		grid-template-areas: "img title price" "img description price";
+		grid-template-columns: 1fr repeat(2, auto);
+		grid-template-rows: repeat(2, auto);
+		grid-template-areas: "img title price" "img description description";
 		column-gap: 1.5rem;
 	}
 	.consoleTitle {
@@ -164,10 +272,9 @@ header {
 		grid-area: price;
 		display: flex;
 		flex-direction: column;
-		margin: auto;
-		justify-content: center;
 		align-items: center;
-		gap: 1rem;
+		justify-content: center;
+		gap: 0.5rem;
 	}
 	.btnAmzn {
 		border: 1px solid #ffd932;
@@ -235,15 +342,25 @@ header {
 		block-size: 20rem;
 		inline-size: 100%;
 	}
-	.itemDescription {
+}
+
+@media screen and (min-width: 1200px) {
+	.consoleCard {
 		border: 1px solid #a5c71b;
-		border-radius: 1rem;
-		background-color: #a5c71b36;
-		padding: 2rem;
+		padding: 1.5rem;
+		display: grid;
+		grid-template-columns: 1fr 60% 1fr;
+		grid-template-rows: 20px auto;
+		grid-template-areas: "img title price" "img description price";
+		column-gap: 1.5rem;
 	}
-	.itemDescription p {
-		margin: 0;
-		text-transform: capitalize;
-		line-height: 2rem;
+	.amzn {
+		grid-area: price;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
 	}
 }

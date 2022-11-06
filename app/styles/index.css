@@ -16,7 +16,7 @@ header {
 
 .bar .logo {
 	border: 1px solid #a5c71b;
-	max-inline-size: 15rem;
+	max-inline-size: 90%;
 	padding-block: 0.5rem;
 	padding-inline: 1rem;
 	border-radius: 0.5rem;
@@ -199,11 +199,20 @@ header {
 	align-items: center;
 	justify-content: center;
 }
+
+.itemImg a {
+	text-align: center;
+}
+
 .itemImg img {
-	block-size: 20rem;
-	inline-size: 20rem;
+	block-size: 50%;
+	inline-size: 50%;
 	object-fit: cover;
 	border-radius: 50%;
+}
+
+.itemTitle p {
+	text-align: center;
 }
 
 .itemTitle {
@@ -341,6 +350,9 @@ header {
 		border: 1px solid #a5c71b;
 		block-size: 20rem;
 		inline-size: 100%;
+	}
+	.navigation > a {
+		font-size: 1.4rem;
 	}
 }
 
